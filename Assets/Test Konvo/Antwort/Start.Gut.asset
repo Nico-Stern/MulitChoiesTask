@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c56d846a35d5814bb46d3a7f9348ca8, type: 3}
+  m_Name: Start.Gut
+  m_EditorClassIdentifier: 
+  anweisung:
+  - CharaterEmotion: {fileID: 0}
+    Text: Gut und selber?
+  - CharaterEmotion: {fileID: 0}
+    Text: Danke mir geht es auch gut! Was machst du so?
+  Antwort1: {fileID: 11400000, guid: 759d40c8b0ec8a14eb6a294032b50c9a, type: 2}
+  Antwort2: {fileID: 11400000, guid: dc2183d970b36d043b1f98adcfab3f5e, type: 2}
