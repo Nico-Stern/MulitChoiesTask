@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c56d846a35d5814bb46d3a7f9348ca8, type: 3}
   m_Name: Start
   m_EditorClassIdentifier: 
+  KastenAntwort: 
   anweisung:
   - CharaterEmotion: {fileID: 0}
-    Text: 
+    Text: Hi lange nicht gesehen
+  - CharaterEmotion: {fileID: 0}
+    Text: Du siehst gut aus
   - CharaterEmotion: {fileID: 0}
     Text: Wie geht es dir?
   Antwort1: {fileID: 11400000, guid: e922fab1dd1a5eb47a24ad6f0bad1281, type: 2}

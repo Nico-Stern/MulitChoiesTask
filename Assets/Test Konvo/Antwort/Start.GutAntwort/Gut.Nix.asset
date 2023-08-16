@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c56d846a35d5814bb46d3a7f9348ca8, type: 3}
   m_Name: Gut.Nix
   m_EditorClassIdentifier: 
+  KastenAntwort: Nix
   anweisung:
-  - CharaterEmotion: {fileID: 0}
-    Text: Nix
   - CharaterEmotion: {fileID: 0}
     Text: Du findest bestimmt noch was!
   Antwort1: {fileID: 0}

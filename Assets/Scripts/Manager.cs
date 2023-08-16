@@ -20,31 +20,55 @@ public class Manager : MonoBehaviour
     public TMP_Text Button1;
     public TMP_Text Button2;
 
+    int currentindex = 0;
+    bool ispressed=false;
+
 
     // Start is called before the first frame update
     void Start()
     {
         changeText();
         btnFertig.SetActive(false);
+        btnAntwort1.SetActive(false);
+        btnAntwort2.SetActive(false);
     }
 
     void changeText()
     {
-        Textbox.text = CurrentText.anweisung[1].Text;
-
+        currentindex = 0;
+        btnAntwort1.SetActive(false);
+        btnAntwort2.SetActive(false);
+        Textbox.text = CurrentText.anweisung[0].Text;
         try
         {
             Ant1 = CurrentText.Antwort1 as ScObTask;
-            Button1.text = Ant1.anweisung[0].Text;
+            Button1.text = Ant1.KastenAntwort;
 
             Ant2 = CurrentText.Antwort2 as ScObTask;
-            Button2.text = Ant2.anweisung[0].Text;
+            Button2.text = Ant2.KastenAntwort;
         }
         catch 
         {
+            
+            btnFertig.SetActive(true);
+        }
+    }
+    void newTextbox()
+    {
+        if (CurrentText.anweisung.Length-1 > currentindex) 
+        {
+            currentindex++;
+            Textbox.text = CurrentText.anweisung[currentindex].Text;
             btnAntwort1.SetActive(false);
             btnAntwort2.SetActive(false);
-            btnFertig.SetActive(true);
+        }
+        else
+        {
+            if(CurrentText.Antwort1==true|| CurrentText.Antwort1 == true)
+            {
+                btnAntwort1.SetActive(true);
+                btnAntwort2.SetActive(true);
+            }
         }
     }
 
@@ -61,8 +85,16 @@ public class Manager : MonoBehaviour
         changeText();
     }
 
-    public void changeScene(string scene)
+    private void Update()
     {
-        SceneManager.LoadScene(scene);
+        if (Input.GetKeyDown(KeyCode.Space)&!ispressed)
+        {
+            ispressed = true;
+            newTextbox();
+        }
+        if (!Input.GetKeyDown(KeyCode.Space))
+        {
+            ispressed = false;
+        }
     }
 }

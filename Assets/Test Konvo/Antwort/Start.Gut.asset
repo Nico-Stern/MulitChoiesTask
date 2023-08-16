@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c56d846a35d5814bb46d3a7f9348ca8, type: 3}
   m_Name: Start.Gut
   m_EditorClassIdentifier: 
+  KastenAntwort: Gut und selber?
   anweisung:
   - CharaterEmotion: {fileID: 0}
-    Text: Gut und selber?
+    Text: "Das ist sch\xF6n zuh\xF6ren"
   - CharaterEmotion: {fileID: 0}
     Text: Danke mir geht es auch gut! Was machst du so?
   Antwort1: {fileID: 11400000, guid: 759d40c8b0ec8a14eb6a294032b50c9a, type: 2}

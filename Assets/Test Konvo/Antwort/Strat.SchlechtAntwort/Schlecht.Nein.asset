@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c56d846a35d5814bb46d3a7f9348ca8, type: 3}
   m_Name: Schlecht.Nein
   m_EditorClassIdentifier: 
+  KastenAntwort: Nein
   anweisung:
-  - CharaterEmotion: {fileID: 0}
-    Text: Nein
   - CharaterEmotion: {fileID: 0}
     Text: Okay, ich hoffe es geht dir bald besser
   Antwort1: {fileID: 0}

@@ -5,6 +5,8 @@ using UnityEngine;
 [CreateAssetMenu]
 public class ScObTask : ScriptableObject
 {
+    public string KastenAntwort;
+
     [Header("Sprecher und Text")]
     public Anweisung[] anweisung;
 
