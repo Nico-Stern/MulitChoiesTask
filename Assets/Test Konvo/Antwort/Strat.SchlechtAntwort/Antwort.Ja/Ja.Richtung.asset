@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3c56d846a35d5814bb46d3a7f9348ca8, type: 3}
-  m_Name: Schlecht.Ja
+  m_Name: Ja.Richtung
   m_EditorClassIdentifier: 
-  KastenAntwort: Ja
+  KastenAntwort: Links
   anweisung:
   - CharaterEmotion: {fileID: 0}
-    Text: Dann komm ruhig mit zu mir
+    Text: 
   - CharaterEmotion: {fileID: 0}
-    Text: Ich habe Cafe und Kuchen
-  Antwort1: {fileID: 11400000, guid: b38a82b26deb4854ab8dbe58b8e15152, type: 2}
+    Text: Okay das war der Richtige weg
+  Antwort1: {fileID: 0}
   Antwort2: {fileID: 0}

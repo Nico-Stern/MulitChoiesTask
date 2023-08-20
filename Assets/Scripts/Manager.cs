@@ -43,14 +43,24 @@ public class Manager : MonoBehaviour
         {
             Ant1 = CurrentText.Antwort1 as ScObTask;
             Button1.text = Ant1.KastenAntwort;
+        }
+        catch 
+        {
+            //animation
+            Button1.text = "";
+            //Inaktiv setzten
+        }
+        try
+        {
 
             Ant2 = CurrentText.Antwort2 as ScObTask;
             Button2.text = Ant2.KastenAntwort;
         }
         catch 
         {
-            
-            btnFertig.SetActive(true);
+            //animation
+            Button2.text = "";
+            //Inaktiv setzten
         }
     }
     void newTextbox()
@@ -68,6 +78,10 @@ public class Manager : MonoBehaviour
             {
                 btnAntwort1.SetActive(true);
                 btnAntwort2.SetActive(true);
+            }
+            else
+            {
+                btnFertig.SetActive(true);
             }
         }
     }
