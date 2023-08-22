@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6ababd4f0239224da3139f4a5b6fd5c, type: 3}
+  m_Name: Simon
+  m_EditorClassIdentifier: 
+  CharacterName: Simon
+  Idle: {fileID: 21300000, guid: 7bed666a7cf75704c978e4b0382e1e9f, type: 3}
+  Sad: {fileID: 21300000, guid: d57f1da0e6484bd44a1407823e6d2426, type: 3}
+  Happy: {fileID: 21300000, guid: f6b768f3ea171704da29b5e217a4e3af, type: 3}
+  Angry: {fileID: 21300000, guid: 81c40e2a41e2c9d45a9ffe2004fc9e70, type: 3}
+  Disgusted: {fileID: 21300000, guid: 84da70b21d6acc74493a40a8e66bc20c, type: 3}

@@ -7,10 +7,13 @@ using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
+    public Image CharacterImage;
+
     public ScObTask CurrentText;
 
     public ScObTask Ant1;
     public ScObTask Ant2;
+    public ScObCharacter CurrentCharacter;
 
     public GameObject btnAntwort1;
     public GameObject btnAntwort2;
@@ -36,6 +39,14 @@ public class Manager : MonoBehaviour
     void changeText()
     {
         currentindex = 0;
+        try
+        {
+            chancePic();
+        }
+        catch
+        {
+
+        }
         btnAntwort1.SetActive(false);
         btnAntwort2.SetActive(false);
         Textbox.text = CurrentText.anweisung[0].Text;
@@ -52,7 +63,6 @@ public class Manager : MonoBehaviour
         }
         try
         {
-
             Ant2 = CurrentText.Antwort2 as ScObTask;
             Button2.text = Ant2.KastenAntwort;
         }
@@ -63,12 +73,20 @@ public class Manager : MonoBehaviour
             //Inaktiv setzten
         }
     }
+
     void newTextbox()
     {
         if (CurrentText.anweisung.Length-1 > currentindex) 
         {
             currentindex++;
             Textbox.text = CurrentText.anweisung[currentindex].Text;
+            
+            //Test
+            chancePic();
+
+            
+
+
             btnAntwort1.SetActive(false);
             btnAntwort2.SetActive(false);
         }
@@ -109,6 +127,32 @@ public class Manager : MonoBehaviour
         if (!Input.GetKeyDown(KeyCode.Space))
         {
             ispressed = false;
+        }
+    }
+
+    void chancePic()
+    {
+        print(CurrentText.anweisung[currentindex].emotion);
+
+        CurrentCharacter = CurrentText.anweisung[currentindex].Charater as ScObCharacter;
+
+        switch (CurrentText.anweisung[currentindex].emotion)
+        {
+            case ScObTask.Emotion.Sad:
+                CharacterImage.sprite = CurrentCharacter.Sad;
+                break;
+            case ScObTask.Emotion.Idle:
+                CharacterImage.sprite = CurrentCharacter.Idle;
+                break;
+            case ScObTask.Emotion.Angry:
+                CharacterImage.sprite = CurrentCharacter.Angry;
+                break;
+            case ScObTask.Emotion.Disgusted:
+                CharacterImage.sprite = CurrentCharacter.Disgusted;
+                break;
+            case ScObTask.Emotion.Happy:
+                CharacterImage.sprite = CurrentCharacter.Happy;
+                break;
         }
     }
 }
