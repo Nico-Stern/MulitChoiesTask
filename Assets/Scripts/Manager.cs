@@ -7,9 +7,11 @@ using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
+
+    public ScObCharacter emoCharacter;
     public Image CharacterImage;
 
-    public ScObTask CurrentText;
+    public ScObTask CurrentAntwort;
 
     public ScObTask Ant1;
     public ScObTask Ant2;
@@ -49,10 +51,10 @@ public class Manager : MonoBehaviour
         }
         btnAntwort1.SetActive(false);
         btnAntwort2.SetActive(false);
-        Textbox.text = CurrentText.anweisung[0].Text;
+        Textbox.text = CurrentAntwort.anweisung[0].Text;
         try
         {
-            Ant1 = CurrentText.Antwort1 as ScObTask;
+            Ant1 = CurrentAntwort.Antwort1 as ScObTask;
             Button1.text = Ant1.KastenAntwort;
         }
         catch 
@@ -63,7 +65,7 @@ public class Manager : MonoBehaviour
         }
         try
         {
-            Ant2 = CurrentText.Antwort2 as ScObTask;
+            Ant2 = CurrentAntwort.Antwort2 as ScObTask;
             Button2.text = Ant2.KastenAntwort;
         }
         catch 
@@ -76,10 +78,10 @@ public class Manager : MonoBehaviour
 
     void newTextbox()
     {
-        if (CurrentText.anweisung.Length-1 > currentindex) 
+        if (CurrentAntwort.anweisung.Length-1 > currentindex) 
         {
             currentindex++;
-            Textbox.text = CurrentText.anweisung[currentindex].Text;
+            Textbox.text = CurrentAntwort.anweisung[currentindex].Text;
             
             //Test
             chancePic();
@@ -92,7 +94,7 @@ public class Manager : MonoBehaviour
         }
         else
         {
-            if(CurrentText.Antwort1==true|| CurrentText.Antwort1 == true)
+            if(CurrentAntwort.Antwort1==true|| CurrentAntwort.Antwort1 == true)
             {
                 btnAntwort1.SetActive(true);
                 btnAntwort2.SetActive(true);
@@ -108,17 +110,29 @@ public class Manager : MonoBehaviour
     {
         if(Button == 0)
         {
-            CurrentText = Ant1;
+            for(int i = 1; i <= CurrentAntwort.Chemie1.Length; i++)
+            {   
+                emoCharacter = CurrentAntwort.Chemie1[i-1].Character;
+                emoCharacter.Love += CurrentAntwort.Chemie1[i-1].PlusLove;
+            }
+            CurrentAntwort = Ant1;
         }
         else
         {
-            CurrentText = Ant2;
+            for (int i = 1; i < CurrentAntwort.Chemie2.Length; i++)
+            {
+                emoCharacter = CurrentAntwort.Chemie1[i-1].Character;
+                emoCharacter.Love += CurrentAntwort.Chemie1[i-1].PlusLove;
+            }
+            CurrentAntwort = Ant2;
         }
         changeText();
     }
 
     private void Update()
     {
+        //Aktualisiert Textbox
+
         if (Input.GetKeyDown(KeyCode.Space)&!ispressed)
         {
             ispressed = true;
@@ -130,13 +144,15 @@ public class Manager : MonoBehaviour
         }
     }
 
+
+    //Tauscht den Character Pic im Game
     void chancePic()
     {
-        print(CurrentText.anweisung[currentindex].emotion);
+        print(CurrentAntwort.anweisung[currentindex].emotion);
 
-        CurrentCharacter = CurrentText.anweisung[currentindex].Charater as ScObCharacter;
+        CurrentCharacter = CurrentAntwort.anweisung[currentindex].Charater as ScObCharacter;
 
-        switch (CurrentText.anweisung[currentindex].emotion)
+        switch (CurrentAntwort.anweisung[currentindex].emotion)
         {
             case ScObTask.Emotion.Sad:
                 CharacterImage.sprite = CurrentCharacter.Sad;

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Simon
   m_EditorClassIdentifier: 
   CharacterName: Simon
+  Love: 50
   Idle: {fileID: 21300000, guid: 7bed666a7cf75704c978e4b0382e1e9f, type: 3}
   Sad: {fileID: 21300000, guid: d57f1da0e6484bd44a1407823e6d2426, type: 3}
   Happy: {fileID: 21300000, guid: f6b768f3ea171704da29b5e217a4e3af, type: 3}

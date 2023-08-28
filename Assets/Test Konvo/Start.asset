@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c56d846a35d5814bb46d3a7f9348ca8, type: 3}
   m_Name: Start
   m_EditorClassIdentifier: 
-  KastenAntwort: 
+  KastenAntwort: Start
   anweisung:
   - Charater: {fileID: 11400000, guid: 90a436dfdb03031449328d7f5cf47ccb, type: 2}
     emotion: 0
@@ -24,4 +24,8 @@ MonoBehaviour:
     emotion: 0
     Text: Wie geht es dir?
   Antwort1: {fileID: 11400000, guid: e922fab1dd1a5eb47a24ad6f0bad1281, type: 2}
+  Chemie1:
+  - Character: {fileID: 11400000, guid: 3c483d7da542ab94da6b1ad4705392a2, type: 2}
+    PlusLove: 1
   Antwort2: {fileID: 11400000, guid: 7824edfa5494a0e4cb91ebc42af4494d, type: 2}
+  Chemie2: []

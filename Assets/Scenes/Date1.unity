@@ -1813,6 +1813,10 @@ PrefabInstance:
       propertyPath: CharacterImage
       value: 
       objectReference: {fileID: 306479476}
+    - target: {fileID: 1348313987305590332, guid: 7b998742dc904f54087f6db29f542dbe, type: 3}
+      propertyPath: CurrentAntwort
+      value: 
+      objectReference: {fileID: 11400000, guid: 87d6f37e2744d39469704b876592f7d0, type: 2}
     - target: {fileID: 1348313987305590333, guid: 7b998742dc904f54087f6db29f542dbe, type: 3}
       propertyPath: m_RootOrder
       value: 1

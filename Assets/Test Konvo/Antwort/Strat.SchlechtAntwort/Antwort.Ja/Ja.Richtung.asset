@@ -14,9 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KastenAntwort: Links
   anweisung:
-  - CharaterEmotion: {fileID: 0}
+  - Charater: {fileID: 0}
+    emotion: 0
     Text: 
-  - CharaterEmotion: {fileID: 0}
+  - Charater: {fileID: 0}
+    emotion: 0
     Text: Okay das war der Richtige weg
-  Antwort1: {fileID: 0}
-  Antwort2: {fileID: 0}
+  Antwort1: {fileID: 11400000, guid: 87d6f37e2744d39469704b876592f7d0, type: 2}
+  Chemie1: []
+  Antwort2: {fileID: 11400000, guid: 87d6f37e2744d39469704b876592f7d0, type: 2}
+  Chemie2: []

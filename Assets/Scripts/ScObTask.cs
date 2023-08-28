@@ -21,7 +21,10 @@ public class ScObTask : ScriptableObject
 
     [Header("Antworten")]
     public ScriptableObject Antwort1;
+    public Chemie[] Chemie1;
+
     public ScriptableObject Antwort2;
+    public Chemie[] Chemie2;
 
     [Serializable]
     public struct Anweisung
@@ -29,5 +32,12 @@ public class ScObTask : ScriptableObject
         public ScObCharacter Charater;
         public Emotion emotion;
         [TextArea(3, 5)] public string Text;
+    }
+
+    [Serializable]
+    public struct Chemie
+    {
+        public ScObCharacter Character;
+        public int PlusLove;
     }
 }
