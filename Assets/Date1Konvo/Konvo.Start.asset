@@ -40,7 +40,7 @@ MonoBehaviour:
       gerannt kommt '
   Quicktime: 1
   QuicktimeSettings:
-    Timer: 5
+    Timer: 3
     QuicktimeAntwort: 0
   Antwort1: {fileID: 11400000, guid: c58338dabdba8924d817cf88b767326e, type: 2}
   Chemie1:

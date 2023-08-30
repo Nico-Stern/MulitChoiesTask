@@ -1937,6 +1937,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2010994190}
     - target: {fileID: 1348313987305590332, guid: 7b998742dc904f54087f6db29f542dbe, type: 3}
+      propertyPath: Timertext
+      value: 
+      objectReference: {fileID: 572040256}
+    - target: {fileID: 1348313987305590332, guid: 7b998742dc904f54087f6db29f542dbe, type: 3}
       propertyPath: btnFertig
       value: 
       objectReference: {fileID: 1139609049}
