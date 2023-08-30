@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6ababd4f0239224da3139f4a5b6fd5c, type: 3}
   m_Name: Player
   m_EditorClassIdentifier: 
-  CharacterName: Player
+  CharacterName: Du
   Love: 50
   Idle: {fileID: 21300000, guid: 9aebd705574f9e642aef1e5f59b3e4d8, type: 3}
   Sad: {fileID: 21300000, guid: 626b9cddb29049e4cac50cd87b419945, type: 3}

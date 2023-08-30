@@ -9,6 +9,7 @@ public class Manager : MonoBehaviour
 {
     public float Timer;
     private bool TimerRun = false;
+    private bool TimerChecked = false;
     public TMP_Text Timertext;
     
     public ScObCharacter emoCharacter;
@@ -44,6 +45,7 @@ public class Manager : MonoBehaviour
     //Neue Task als CurrentTask setzten
     void changeText()
     {
+        TimerChecked = false;
         currentindex = 0;
         try
         {
@@ -100,8 +102,9 @@ public class Manager : MonoBehaviour
             {
                 btnAntwort1.SetActive(true);
                 btnAntwort2.SetActive(true);
-                if (CurrentAntwort.Quicktime)
+                if (CurrentAntwort.Quicktime&!TimerChecked)
                 {
+                    TimerChecked = true;
                     Timer= CurrentAntwort.QuicktimeSettings.Timer;
                     TimerRun = true;
                 }
@@ -171,6 +174,10 @@ public class Manager : MonoBehaviour
                     break;
                 case ScObTask.AutoAntwort.Antwort2:
                     OnButten(1);
+                    break;
+                case ScObTask.AutoAntwort.Zufall:
+                    int index = Random.Range(0, 2);
+                    OnButten(index);
                     break;
             }
             Timer = 1;

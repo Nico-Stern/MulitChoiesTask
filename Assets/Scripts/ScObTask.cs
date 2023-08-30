@@ -20,6 +20,7 @@ public class ScObTask : ScriptableObject
     {
         Antwort1,
         Antwort2,
+        Zufall
     }
 
     [Header("Sprecher und Text")]
