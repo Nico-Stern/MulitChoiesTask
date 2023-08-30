@@ -12,5 +12,5 @@ public class ScObCharacter : ScriptableObject
     public Sprite Sad;
     public Sprite Happy;
     public Sprite Angry;
-    public Sprite Disgusted;
+    public Sprite Fear;
 }

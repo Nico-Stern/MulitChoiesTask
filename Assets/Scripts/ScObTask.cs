@@ -13,7 +13,7 @@ public class ScObTask : ScriptableObject
         Sad,
         Happy,
         Angry,
-        Disgusted,
+        Fear,
     }
 
     [Header("Sprecher und Text")]

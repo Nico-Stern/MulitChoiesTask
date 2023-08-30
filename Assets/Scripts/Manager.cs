@@ -163,8 +163,8 @@ public class Manager : MonoBehaviour
             case ScObTask.Emotion.Angry:
                 CharacterImage.sprite = CurrentCharacter.Angry;
                 break;
-            case ScObTask.Emotion.Disgusted:
-                CharacterImage.sprite = CurrentCharacter.Disgusted;
+            case ScObTask.Emotion.Fear:
+                CharacterImage.sprite = CurrentCharacter.Fear;
                 break;
             case ScObTask.Emotion.Happy:
                 CharacterImage.sprite = CurrentCharacter.Happy;

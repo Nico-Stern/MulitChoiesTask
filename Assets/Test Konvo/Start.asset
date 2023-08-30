@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   KastenAntwort: Start
   anweisung:
-  - Charater: {fileID: 11400000, guid: 90a436dfdb03031449328d7f5cf47ccb, type: 2}
+  - Charater: {fileID: 11400000, guid: 7769aa8cf9a45464e9170a2243d31e50, type: 2}
     emotion: 0
     Text: Hi lange nicht gesehen
-  - Charater: {fileID: 11400000, guid: 3c483d7da542ab94da6b1ad4705392a2, type: 2}
+  - Charater: {fileID: 11400000, guid: 7769aa8cf9a45464e9170a2243d31e50, type: 2}
     emotion: 2
     Text: Du siehst gut aus
   - Charater: {fileID: 11400000, guid: 3c483d7da542ab94da6b1ad4705392a2, type: 2}
