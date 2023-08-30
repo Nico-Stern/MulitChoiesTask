@@ -16,9 +16,19 @@ public class ScObTask : ScriptableObject
         Fear,
     }
 
+    public enum AutoAntwort
+    {
+        Antwort1,
+        Antwort2,
+    }
+
     [Header("Sprecher und Text")]
     public Anweisung[] anweisung;
 
+    [Header(("QuickTime?"))] 
+    public bool Quicktime;
+    public QuicktimeStruct QuicktimeSettings;
+    
     [Header("Antworten")]
     public ScriptableObject Antwort1;
     public Chemie[] Chemie1;
@@ -39,5 +49,12 @@ public class ScObTask : ScriptableObject
     {
         public ScObCharacter Character;
         public int PlusLove;
+    }
+    
+    [Serializable]
+    public struct QuicktimeStruct
+    {
+        public float Timer;
+        public AutoAntwort QuicktimeAntwort;
     }
 }

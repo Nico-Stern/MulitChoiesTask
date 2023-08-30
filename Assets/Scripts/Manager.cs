@@ -7,7 +7,10 @@ using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
-
+    public float Timer;
+    private bool TimerRun = false;
+    public TMP_Text Timertext;
+    
     public ScObCharacter emoCharacter;
     public Image CharacterImage;
 
@@ -29,7 +32,7 @@ public class Manager : MonoBehaviour
     bool ispressed=false;
 
 
-    // Start is called before the first frame update
+    // Alle Buttons ausschalten
     void Start()
     {
         changeText();
@@ -38,6 +41,7 @@ public class Manager : MonoBehaviour
         btnAntwort2.SetActive(false);
     }
 
+    //Neue Task als CurrentTask setzten
     void changeText()
     {
         currentindex = 0;
@@ -76,6 +80,7 @@ public class Manager : MonoBehaviour
         }
     }
 
+    //Textbox Aktualisieren mit dem Charaterbild
     void newTextbox()
     {
         if (CurrentAntwort.anweisung.Length-1 > currentindex) 
@@ -86,9 +91,6 @@ public class Manager : MonoBehaviour
             //Test
             chancePic();
 
-            
-
-
             btnAntwort1.SetActive(false);
             btnAntwort2.SetActive(false);
         }
@@ -98,6 +100,11 @@ public class Manager : MonoBehaviour
             {
                 btnAntwort1.SetActive(true);
                 btnAntwort2.SetActive(true);
+                if (CurrentAntwort.Quicktime)
+                {
+                    Timer= CurrentAntwort.QuicktimeSettings.Timer;
+                    TimerRun = true;
+                }
             }
             else
             {
@@ -106,8 +113,10 @@ public class Manager : MonoBehaviour
         }
     }
 
+    //Welcher Button wurde gedrückt + Chieme
     public void OnButten(int Button)
     {
+        TimerRun = false;
         if(Button == 0)
         {
             for(int i = 1; i <= CurrentAntwort.Chemie1.Length; i++)
@@ -141,6 +150,30 @@ public class Manager : MonoBehaviour
         if (!Input.GetKeyDown(KeyCode.Space))
         {
             ispressed = false;
+        }
+
+        if (TimerRun)
+        {
+            Timertext.text = Timer.ToString("0.00");
+            Timer = Timer - Time.deltaTime;
+        }
+        else
+        {
+            Timertext.text = "";
+        }
+
+        if (Timer <= 0)
+        {
+            switch (CurrentAntwort.QuicktimeSettings.QuicktimeAntwort)
+            {
+                case   ScObTask.AutoAntwort.Antwort1:
+                    OnButten(0);
+                    break;
+                case ScObTask.AutoAntwort.Antwort2:
+                    OnButten(1);
+                    break;
+            }
+            Timer = 1;
         }
     }
 

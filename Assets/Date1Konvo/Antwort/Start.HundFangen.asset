@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c56d846a35d5814bb46d3a7f9348ca8, type: 3}
+  m_Name: Start.HundFangen
+  m_EditorClassIdentifier: 
+  KastenAntwort: 'rasch versuche ich den Hund einzufangen '
+  anweisung:
+  - Charater: {fileID: 11400000, guid: 5cce1befdbcc1ec4ea46f8a3b8e7e38f, type: 2}
+    emotion: 0
+    Text: 'nach einer Weile des Rennens, fingen wir gemeinsam den Hund ein '
+  - Charater: {fileID: 11400000, guid: 7769aa8cf9a45464e9170a2243d31e50, type: 2}
+    emotion: 2
+    Text: "Vielen lieben Dank f\xFCr deine Hilfe! Ohne dich, h\xE4tte ich Lucky nie
+      eingeholt! "
+  - Charater: {fileID: 11400000, guid: 5cce1befdbcc1ec4ea46f8a3b8e7e38f, type: 2}
+    emotion: 2
+    Text: Nicht der Redewert
+  - Charater: {fileID: 11400000, guid: 7769aa8cf9a45464e9170a2243d31e50, type: 2}
+    emotion: 0
+    Text: "Darf ich fragen, wie du hei\xDFt? "
+  Antwort1: {fileID: 0}
+  Chemie1: []
+  Antwort2: {fileID: 0}
+  Chemie2: []
