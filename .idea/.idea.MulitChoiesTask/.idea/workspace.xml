@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9fa829a7-cb69-4679-b1c0-e00e550a4e40" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MulitChoiesTask/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MulitChoiesTask/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Character/Yoshio.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Character/Yoshio.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Manager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScObCharacter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScObCharacter.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ScObTask.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ScObTask.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +69,7 @@
       <updated>1692082205277</updated>
       <workItem from="1692082221445" duration="2414000" />
       <workItem from="1692343757722" duration="26000" />
-      <workItem from="1693399310955" duration="4249000" />
+      <workItem from="1693399310955" duration="5004000" />
     </task>
     <servers />
   </component>

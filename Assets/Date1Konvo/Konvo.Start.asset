@@ -46,7 +46,11 @@ MonoBehaviour:
   Chemie1:
   - Character: {fileID: 11400000, guid: 7769aa8cf9a45464e9170a2243d31e50, type: 2}
     PlusLove: -5
+  - Character: {fileID: 11400000, guid: 3c483d7da542ab94da6b1ad4705392a2, type: 2}
+    PlusLove: -5
   Antwort2: {fileID: 11400000, guid: 64895f2ef2eda6042ae8d4d74c667062, type: 2}
   Chemie2:
   - Character: {fileID: 11400000, guid: 7769aa8cf9a45464e9170a2243d31e50, type: 2}
+    PlusLove: 5
+  - Character: {fileID: 11400000, guid: 3c483d7da542ab94da6b1ad4705392a2, type: 2}
     PlusLove: 5

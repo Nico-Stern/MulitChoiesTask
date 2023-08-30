@@ -14,6 +14,7 @@ public class ScObTask : ScriptableObject
         Happy,
         Angry,
         Fear,
+        Shadow
     }
 
     public enum AutoAntwort

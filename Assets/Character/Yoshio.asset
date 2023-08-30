@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Yoshio
   m_EditorClassIdentifier: 
   CharacterName: Yoshio
-  Love: 50
+  Love: 40
   Idle: {fileID: 21300000, guid: 84373d88eef028b4c801d4474f67d883, type: 3}
   Sad: {fileID: 21300000, guid: 0b53a8754ae439e4f90d85e776139a57, type: 3}
   Happy: {fileID: 21300000, guid: 4a562dc5795a01c408d7063c6fc75138, type: 3}
   Angry: {fileID: 21300000, guid: cfece748d77e2eb438ce049de8d1f913, type: 3}
   Fear: {fileID: 21300000, guid: aa09674e41a1ccb4da352835142b7819, type: 3}
+  Shadow: {fileID: 0}

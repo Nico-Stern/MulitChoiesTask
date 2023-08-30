@@ -227,6 +227,9 @@ public class Manager : MonoBehaviour
             case ScObTask.Emotion.Happy:
                 CharacterImage.sprite = CurrentCharacter.Happy;
                 break;
+            case ScObTask.Emotion.Shadow:
+                CharacterImage.sprite = CurrentCharacter.Shadow;
+                break;
         }
     }
 }
