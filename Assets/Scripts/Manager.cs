@@ -126,15 +126,33 @@ public class Manager : MonoBehaviour
             {   
                 emoCharacter = CurrentAntwort.Chemie1[i-1].Character;
                 emoCharacter.Love += CurrentAntwort.Chemie1[i-1].PlusLove;
+                if (emoCharacter.Love < 0)
+                {
+                    emoCharacter.Love = 0;
+                }
+
+                if (emoCharacter.Love > 100)
+                {
+                    emoCharacter.Love = 100;
+                }
             }
             CurrentAntwort = Ant1;
         }
         else
         {
-            for (int i = 1; i < CurrentAntwort.Chemie2.Length; i++)
+            for (int i = 1; i <= CurrentAntwort.Chemie2.Length; i++)
             {
-                emoCharacter = CurrentAntwort.Chemie1[i-1].Character;
-                emoCharacter.Love += CurrentAntwort.Chemie1[i-1].PlusLove;
+                emoCharacter = CurrentAntwort.Chemie2[i-1].Character;
+                emoCharacter.Love += CurrentAntwort.Chemie2[i-1].PlusLove;
+                if (emoCharacter.Love < 0)
+                {
+                    emoCharacter.Love = 0;
+                }
+
+                if (emoCharacter.Love > 100)
+                {
+                    emoCharacter.Love = 100;
+                }
             }
             CurrentAntwort = Ant2;
         }
