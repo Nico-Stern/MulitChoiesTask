@@ -15,7 +15,7 @@ MonoBehaviour:
   KastenAntwort: 'Ich lasse den Hund an mir vorbei rennen, da dieser dreckig aussieht '
   anweisung:
   - Charater: {fileID: 11400000, guid: 7769aa8cf9a45464e9170a2243d31e50, type: 2}
-    emotion: 4
+    emotion: 3
     Text: 'Wieso hast du ihn an dir vorbei rennen gelassen? '
   - Charater: {fileID: 11400000, guid: 5cce1befdbcc1ec4ea46f8a3b8e7e38f, type: 2}
     emotion: 0
@@ -26,6 +26,10 @@ MonoBehaviour:
   - Charater: {fileID: 11400000, guid: 5cce1befdbcc1ec4ea46f8a3b8e7e38f, type: 2}
     emotion: 0
     Text: "Hoffentlich f\xE4ngt er den Hund noch"
+  Quicktime: 0
+  QuicktimeSettings:
+    Timer: 0
+    QuicktimeAntwort: 0
   Antwort1: {fileID: 0}
   Chemie1: []
   Antwort2: {fileID: 0}

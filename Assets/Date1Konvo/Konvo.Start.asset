@@ -26,10 +26,10 @@ MonoBehaviour:
     Text: "Andererseits lerne ich wieder neue Leute kennen, da ich mein erstes Uni
       Jahr vers\xE4umt habe und es somit wiederholen muss"
   - Charater: {fileID: 11400000, guid: 7769aa8cf9a45464e9170a2243d31e50, type: 2}
-    emotion: 4
+    emotion: 5
     Text: Hey! Du da!
   - Charater: {fileID: 11400000, guid: 7769aa8cf9a45464e9170a2243d31e50, type: 2}
-    emotion: 4
+    emotion: 5
     Text: 'Halte meinen Hund auf! '
   - Charater: {fileID: 11400000, guid: 5cce1befdbcc1ec4ea46f8a3b8e7e38f, type: 2}
     emotion: 0
