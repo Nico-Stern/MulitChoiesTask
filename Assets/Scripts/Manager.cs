@@ -1,9 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class Manager : MonoBehaviour
 {
@@ -20,6 +22,7 @@ public class Manager : MonoBehaviour
     public ScObTask Ant1;
     public ScObTask Ant2;
     public ScObCharacter CurrentCharacter;
+    private ScObCharacter NewCharacter;
 
     public GameObject btnAntwort1;
     public GameObject btnAntwort2;
@@ -28,6 +31,7 @@ public class Manager : MonoBehaviour
     public TMP_Text Textbox;
     public TMP_Text Button1;
     public TMP_Text Button2;
+    public TMP_Text Name;
 
     int currentindex = 0;
     bool ispressed=false;
@@ -40,6 +44,7 @@ public class Manager : MonoBehaviour
         btnFertig.SetActive(false);
         btnAntwort1.SetActive(false);
         btnAntwort2.SetActive(false);
+        CharacterImage.color = new Color(0, 0, 0, 0);
     }
 
     //Neue Task als CurrentTask setzten
@@ -58,6 +63,7 @@ public class Manager : MonoBehaviour
         btnAntwort1.SetActive(false);
         btnAntwort2.SetActive(false);
         Textbox.text = CurrentAntwort.anweisung[0].Text;
+        Name.text = CurrentCharacter.CharacterName;
         try
         {
             Ant1 = CurrentAntwort.Antwort1 as ScObTask;
@@ -89,7 +95,7 @@ public class Manager : MonoBehaviour
         {
             currentindex++;
             Textbox.text = CurrentAntwort.anweisung[currentindex].Text;
-            
+
             //Test
             chancePic();
 
@@ -163,7 +169,7 @@ public class Manager : MonoBehaviour
     {
         //Aktualisiert Textbox
 
-        if (Input.GetKeyDown(KeyCode.Space)&!ispressed)
+        if (Input.GetKeyDown(KeyCode.Mouse0)&!ispressed)
         {
             ispressed = true;
             newTextbox();
@@ -209,27 +215,44 @@ public class Manager : MonoBehaviour
         print(CurrentAntwort.anweisung[currentindex].emotion);
 
         CurrentCharacter = CurrentAntwort.anweisung[currentindex].Charater as ScObCharacter;
+        
 
-        switch (CurrentAntwort.anweisung[currentindex].emotion)
+        if (CurrentCharacter.name == "Player")
         {
-            case ScObTask.Emotion.Sad:
-                CharacterImage.sprite = CurrentCharacter.Sad;
-                break;
-            case ScObTask.Emotion.Idle:
-                CharacterImage.sprite = CurrentCharacter.Idle;
-                break;
-            case ScObTask.Emotion.Angry:
-                CharacterImage.sprite = CurrentCharacter.Angry;
-                break;
-            case ScObTask.Emotion.Fear:
-                CharacterImage.sprite = CurrentCharacter.Fear;
-                break;
-            case ScObTask.Emotion.Happy:
-                CharacterImage.sprite = CurrentCharacter.Happy;
-                break;
-            case ScObTask.Emotion.Shadow:
-                CharacterImage.sprite = CurrentCharacter.Shadow;
-                break;
+        }
+        else
+        {
+            CharacterImage.color = new Color(1, 1, 1, 1);
+            switch (CurrentAntwort.anweisung[currentindex].emotion)
+            {
+                case ScObTask.Emotion.Sad:
+                    CharacterImage.sprite = CurrentCharacter.Sad;
+                    break;
+                case ScObTask.Emotion.Idle:
+                    CharacterImage.sprite = CurrentCharacter.Idle;
+                    break;
+                case ScObTask.Emotion.Angry:
+                    CharacterImage.sprite = CurrentCharacter.Angry;
+                    break;
+                case ScObTask.Emotion.Fear:
+                    CharacterImage.sprite = CurrentCharacter.Fear;
+                    break;
+                case ScObTask.Emotion.Happy:
+                    CharacterImage.sprite = CurrentCharacter.Happy;
+                    break;
+                case ScObTask.Emotion.Shadow:
+                    CharacterImage.sprite = CurrentCharacter.Shadow;
+                    break;
+            }
+        }
+
+        if (CurrentAntwort.anweisung[currentindex].emotion == ScObTask.Emotion.Shadow)
+        {
+            Name.text = "???";
+        }
+        else
+        {
+            Name.text = CurrentCharacter.CharacterName;
         }
     }
 }
